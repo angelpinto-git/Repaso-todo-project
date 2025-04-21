@@ -1,10 +1,10 @@
 from termcolor import colored
 
-from utils import clear_console
+import helpers.console_helpers as console
 
 
 def add_todo(todos):
-    clear_console()
+    console.clear()
     name = input('Enter TODO name: ')
     description = input('Enter TODO description: ')
     todo = {
@@ -17,7 +17,7 @@ def add_todo(todos):
 
 
 def view_todos(todos):
-    clear_console()
+    console.clear()
     if not todos:
         print(colored('No TODOs available.', 'yellow'))
         return
@@ -57,5 +57,4 @@ def delete_todo(todos):
         deleted_todo = todos.pop(index)
         print(colored(f'TODO "{deleted_todo["name"]}" deleted successfully.', 'green'))
     except ValueError:
-        print(colored('Invalid input, please enter a number.', 'red'))
-
+        print(colored('Invalid input, please enter a number.', 'red'))      
