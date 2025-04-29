@@ -1,4 +1,10 @@
-__pycache__/*
+# Python files
+**/__pycache__/*
 
+# Virtual venv
 venv/* 
 env/*
+.python-version
+
+# Data
+todos.json
